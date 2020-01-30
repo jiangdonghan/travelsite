@@ -1,8 +1,12 @@
 <template>
     <div class="header">
-        <div class="header-left">icon1</div>
-        <div class="header-input">city/tourist attractions/theme</div>
-        <div class="header-right">dropdown</div>
+        <div class="header-left">
+            <div class="iconfont back-icon">&#xe624;</div>
+            </div>
+        <div class="header-input">
+            <span class="iconfont">&#xe632;</span>
+            city/tourist attractions/theme</div>
+        <div class="header-right">City<span class="iconfont arrow-icon">&#xe62d;</span></div>
     </div>
 </template>
 <script>
@@ -11,14 +15,18 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
+    @import '~styles/variables.styl'
     .header
         display: flex
         line-height: .86rem
-        background : #00bcd4
+        background : $bgColor
         color: #fff
         .header-left
             width: .64rem
             float: left
+            .back-icon
+                text-align center
+                font-size .4rem
         .header-input
             flex:1
             background: #fff
@@ -28,8 +36,12 @@ export default {
             line-height :.64rem
             height .64rem
             color #ccc
+            padding-left 0.2 rem
         .header-right
             width: 1.24rem
             float: right
             text-align center
+            .arrow-icon
+                margin-left 0.1rem
+                font-size 0.24rem
 </style>
