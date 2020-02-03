@@ -24,11 +24,11 @@ export default {
       },
       swiperList: [{
         id: '0001',
-        imgUrl: 'https://via.placeholder.com/600x150/0000FF'
+        imgUrl: 'https://images.pexels.com/photos/1619854/pexels-photo-1619854.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
       },
       {
         id: '0002',
-        imgUrl: 'https://via.placeholder.com/600x150/'
+        imgUrl: 'https://images.pexels.com/photos/2846069/pexels-photo-2846069.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
       }
       ]
     }
@@ -44,10 +44,10 @@ export default {
     width 100%
     overflow hidden
     height 0
-    padding-bottom 25%
+    padding-bottom 35%
     background #eee
     // or height:31.25vw
     .swiper-img
       width 100%
-
+      height 35vw
 </style>

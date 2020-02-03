@@ -2,50 +2,32 @@
   <div class = "icons">
     <div class = "icon">
       <div class="icon-img">
-        <img class = "icon-img-content" src="https://via.placeholder.com/100x100/">
-        <p class = "icon-desc">xxxx</p>
+        <img class = "icon-img-content" src="//s.qunarzz.com/homenode/images/touchheader/flight.png">
+        <p class = "icon-desc">Flight</p>
       </div>
     </div>
         <div class = "icon">
       <div class="icon-img">
-        <img class = "icon-img-content" src="https://via.placeholder.com/100x100/">
-        <p class = "icon-desc">xxxx</p>
+        <img class = "icon-img-content" src="//s.qunarzz.com/homenode/images/touchheader/train.png">
+        <p class = "icon-desc">Train</p>
       </div>
     </div>
         <div class = "icon">
       <div class="icon-img">
-        <img class = "icon-img-content" src="https://via.placeholder.com/100x100/">
-        <p class = "icon-desc">xxxx</p>
+        <img class = "icon-img-content" src="//s.qunarzz.com/homenode/images/touchheader/hotel.png">
+        <p class = "icon-desc">Hotel</p>
+      </div>
+    </div>
+        <div class = "icon">
+      <div class="icon-img">
+        <img class = "icon-img-content" src="//s.qunarzz.com/homenode/images/touchheader/package.png">
+        <p class = "icon-desc">Vacation</p>
       </div>
     </div>
     <div class = "icon">
-      <div class="icon-img">
-        <img class = "icon-img-content" src="https://via.placeholder.com/100x100/">
-        <p class = "icon-desc">xxxx</p>
-      </div>
-    </div>
-        <div class = "icon">
-      <div class="icon-img">
-        <img class = "icon-img-content" src="https://via.placeholder.com/100x100/">
-        <p class = "icon-desc">xxxx</p>
-      </div>
-    </div>
-        <div class = "icon">
-      <div class="icon-img">
-        <img class = "icon-img-content" src="https://via.placeholder.com/100x100/">
-        <p class = "icon-desc">xxxx</p>
-      </div>
-    </div>
-        <div class = "icon">
-      <div class="icon-img">
-        <img class = "icon-img-content" src="https://via.placeholder.com/100x100/">
-        <p class = "icon-desc">xxxx</p>
-      </div>
-    </div>
-        <div class = "icon">
-      <div class="icon-img">
-        <img class = "icon-img-content" src="https://via.placeholder.com/100x100/">
-        <p class = "icon-desc">xxxx</p>
+          <div class="icon-img">
+        <img class = "icon-img-content" src="//s.qunarzz.com/homenode/images/touchheader/piao.png">
+        <p class = "icon-desc">Tickets</p>
       </div>
     </div>
 
@@ -88,7 +70,6 @@ export default {
         position absolute
         right:0
         left:0
-        bottom:0
         height 0.44rem
         line-height 0.44rem
         color $darkTextColor
