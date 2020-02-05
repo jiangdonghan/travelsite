@@ -93,11 +93,12 @@ export default {
 <style lang = "stylus" scoped>
 @import '~styles/variables.styl';
 @import '~styles/mixins.styl';
-
+.icons{
+  margin-top: 0.1rem
+}
 .icons >>> .swiper-container {
   height: 0;
   padding-bottom: 50%;
-
   .icon {
     position: relative;
     overflow: hidden;
