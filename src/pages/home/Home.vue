@@ -9,7 +9,7 @@
 </template>
 
 <script>
-
+import axios from 'axios'
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
@@ -23,6 +23,18 @@ export default {
     HomeIcons,
     HomeRecommend,
     HomeWeekend
+  },
+  methods: {
+    getHomeInfo () {
+      axios.get('/api/index.json')
+        .then(this.getHomeInfoSucc)
+    },
+    getHomeInfoSucc (res) {
+      console.log(res)
+    }
+  },
+  mounted () {
+    this.getHomeInfo()
   }
 }
 </script>
