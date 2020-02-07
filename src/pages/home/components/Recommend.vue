@@ -3,7 +3,7 @@
     <div class = "title">Recommendations</div>
 
     <ul>
-      <li class = "item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class = "item border-bottom" v-for="item of list" :key="item.id">
         <img  class="item-img" :src="item.imgUrl"/>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -18,26 +18,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1501/18/181cff1e8af11041.water.jpg_200x200_2e185c41.jpg',
-        title: '悉尼海洋世界',
-        desc: '浪漫悉尼首站，浪漫的海洋主题乐园'
-      }, {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1903/b0/b0a81289b537c934a3.water.jpg_200x200_816c0f59.jpg',
-        title: '澳门塔蹦级',
-        desc: '澳门塔蹦极'
-      }, {
-        id: '0003',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1410/16/f0e5b7624c03a47238d108469d8a58e6.jpg_200x200_05bd1651.jpg',
-        title: 'shopping mall',
-        desc: 'hongkong shopping mall'
-      }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page,index) of pages" :key="index">
         <div class="icon" v-for="item of page"
         :key="item.id">
@@ -20,64 +20,20 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      iconList: [
-        {
-          id: '0001',
-          imgUrl:
-            '//s.qunarzz.com/homenode/images/touchheader/flight.png',
-          desc: 'Flight'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            '//s.qunarzz.com/homenode/images/touchheader/train.png',
-          desc: 'Train'
-        },
-        {
-          id: '0003',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          desc: 'Hotel'
-        },
-        {
-          id: '0004',
-          imgUrl:
-            '//s.qunarzz.com/homenode/images/touchheader/train.png',
-          desc: 'Train'
-        },
-        {
-          id: '0005',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/package.png',
-          desc: 'Vacation'
-        },
-        {
-          id: '0006',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/piao.png',
-          desc: 'tickets'
-        },
-        {
-          id: '0007',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/package.png',
-          desc: 'Vacation'
-        },
-        {
-          id: '0008',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/package.png',
-          desc: 'Vacation'
-        },
-        {
-          id: '0009',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/package.png',
-          desc: 'Vacation'
-        }
-      ]
+      swiperOption: {
+        autoplay: false
+      }
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
