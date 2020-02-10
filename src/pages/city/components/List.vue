@@ -1,5 +1,6 @@
 <template>
-<div class = "list">
+<div class = "list" ref="wrapper">
+  <div>
   <div class="area">
     <div class="title border-topbottom">Current City</div>
     <div class="button-list">
@@ -84,11 +85,18 @@
       <div class="item border-bottom">acity</div>
     </div>
   </div>
+  </div>
 </div>
 </template>
 <script>
+import Bscroll from 'better-scroll'
 export default {
-  name: 'CityList'
+  name: 'CityList',
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.wrapper)
+    console.log(this.scroll)
+    console.log(this.$refs.wrapper)
+  }
 }
 </script>
 
@@ -109,9 +117,8 @@ export default {
     left 0
     bottom 0
     right 0
-    background red
     .title
-      line-height .4rem
+      line-height .54rem
       background #eee
       padding-left .2rem
       color #666
