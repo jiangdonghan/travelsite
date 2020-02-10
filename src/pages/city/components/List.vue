@@ -5,84 +5,22 @@
     <div class="title border-topbottom">Current City</div>
     <div class="button-list">
       <div class="button-wrapper">
-      <div class="button">button</div>
+      <div class="button">BeiJing</div>
       </div>
     </div>
   </div>
      <div class="area">
     <div class="title border-topbottom">Hot City</div>
     <div class="button-list">
-      <div class="button-wrapper">
-      <div class="button">北京</div>
-      </div>
-      <div class="button-wrapper">
-      <div class="button">上海</div>
-      </div>
-      <div class="button-wrapper">
-      <div class="button">xx</div>
-      </div>
-      <div class="button-wrapper">
-      <div class="button">xx</div>
-      </div>
-      <div class="button-wrapper">
-      <div class="button">xx</div>
+      <div class="button-wrapper" v-for="item of hot" :key="item.id">
+      <div class="button">{{item.name}}</div>
       </div>
     </div>
   </div>
-  <div class="area">
-    <div class="title border-topbottom">A</div>
-    <div class="item-list">
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-    </div>
-    <div class="title border-topbottom">B</div>
-    <div class="item-list">
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-    </div>
-    <div class="title border-topbottom">C</div>
-    <div class="item-list">
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-    </div>
-    <div class="title border-topbottom">D</div>
-    <div class="item-list">
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-    </div>
-    <div class="title border-topbottom">E</div>
-    <div class="item-list">
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-    </div>
-    <div class="title border-topbottom">F</div>
-    <div class="item-list">
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
-      <div class="item border-bottom">acity</div>
+  <div class="area" v-for="(item, key) of cities" :key="key">
+    <div class="title border-topbottom">{{key}}</div>
+    <div class="item-list" v-for="innerItem of item" :key="innerItem.id">
+      <div class="item border-bottom">{{innerItem.name}}</div>
     </div>
   </div>
   </div>
@@ -94,8 +32,10 @@ export default {
   name: 'CityList',
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
-    console.log(this.scroll)
-    console.log(this.$refs.wrapper)
+  },
+  props: {
+    hot: Array,
+    cities: Object
   }
 }
 </script>
