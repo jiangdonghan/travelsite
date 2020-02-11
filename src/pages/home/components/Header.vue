@@ -7,7 +7,7 @@
             <span class="iconfont">&#xe632;</span>
             city/tourist attractions/theme</div>
         <router-link to="/city">
-        <div class="header-right">City<span class="iconfont arrow-icon">&#xe62d;</span></div>
+        <div class="header-right">{{this.$store.state.city}}<span class="iconfont arrow-icon">&#xe62d;</span></div>
         </router-link>
     </div>
 </template>
