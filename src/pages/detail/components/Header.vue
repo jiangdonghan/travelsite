@@ -38,6 +38,10 @@ export default {
   // keep-alive so it will be used
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+    console.log('scroll')
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
