@@ -1,15 +1,15 @@
 <template>
 <div>
   <div class="banner" @click="handleBannerClick">
-    <img class="banner-img" src="http://placekitten.com/600/330"/>
+    <img class="banner-img" :src="bannerImg"/>
     <div class="banner-info">
-      <div class="banner-title">Lorem, ipsum.</div>
+      <div class="banner-title">{{this.sightName}}</div>
       <div class="banner-number">
-        <span class="iconfont banner-icon">&#xe662;</span>39
+        <span class="iconfont banner-icon">&#xe662;</span>{{this.galleryImgs.length}}
       </div>
     </div>
   </div>
-  <common-gallery :imgs="imgs" v-show="showGallery" @close="handleGallaryClose"></common-gallery>
+  <common-gallery :imgs="galleryImgs" v-show="showGallery" @close="handleGalleryClose"></common-gallery>
 </div>
 </template>
 
@@ -17,17 +17,21 @@
 import CommonGallery from 'common/gallery/Gallery'
 export default {
   name: 'DetailBanner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    galleryImgs: Array
+  },
   data () {
     return {
-      showGallery: false,
-      imgs: ['http://placekitten.com/800/800', 'http://placekitten.com/801/800']
+      showGallery: false
     }
   },
   methods: {
     handleBannerClick () {
       this.showGallery = true
     },
-    handleGallaryClose () {
+    handleGalleryClose () {
       this.showGallery = false
     }
   },

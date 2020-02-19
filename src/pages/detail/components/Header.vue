@@ -36,11 +36,11 @@ export default {
     }
   },
   // keep-alive so it will be used
-  activated () {
+  mounted () {
     window.addEventListener('scroll', this.handleScroll)
     console.log('scroll')
   },
-  deactivated () {
+  beforeDestroy () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
@@ -62,6 +62,7 @@ export default {
       color #fff
       font-size .4rem
   .header-fixed
+    z-index: 2
     position fixed
     top: 0
     left: 0
