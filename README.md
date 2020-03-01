@@ -1,8 +1,17 @@
-# travel
 
-> A Vue.js project
 
-## Build Setup
+> A Vue.js qunar static website project in mobile view
+> original website: [去哪儿qunar](https://www.qunar.com/)
+
+## Home Page
+![](./static/demo/home.png)
+
+## Query page
+![](./static/demo/city.png)
+
+## Detail page
+![](./static/demo/detail.png)
+# Build Setup
 
 ``` bash
 # install dependencies
